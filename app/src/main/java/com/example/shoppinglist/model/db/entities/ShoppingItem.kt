@@ -1,10 +1,10 @@
-package com.example.shoppinglist.model
+package com.example.shoppinglist.model.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "shopping_items")
-data class Shopping_item(
+data class ShoppingItem(
     var name: String,
     var amount: Int
 ) {
