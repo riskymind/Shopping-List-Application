@@ -37,11 +37,12 @@ class ShoppingAdapter(
         }
 
         holder.itemView.ivMinus.setOnClickListener {
-            if (currentShoppingItem.amount > 0) {
+            if (currentShoppingItem.amount > 1) {
                 currentShoppingItem.amount--
                 viewModel.upsert(currentShoppingItem)
             }else{
-             Toast.makeText(context, "nothing to reduce to ", Toast.LENGTH_SHORT).show()
+             Toast.makeText(context, "amount must be greater than 0", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
         }
 
